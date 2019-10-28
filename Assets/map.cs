@@ -8,6 +8,11 @@ public class map : MonoBehaviour
     public GameObject RangedUnits;
     public GameObject Wizard;
     public GameObject RBuildings;
+    public GameObject FBuildings;
+
+    public int width;
+    public int hight;
+    public bool[,] MapArea;
 
     // Start is called before the first frame update
     void Start()
@@ -20,4 +25,17 @@ public class map : MonoBehaviour
     {
         
     }
+   /* void display()
+    {
+        foreach (GameObject)
+        {
+            Destroy();
+        }
+    }
+
+    void Populate()
+    {
+        MapArea = new bool[width, hight];
+
+    }*/
 }
