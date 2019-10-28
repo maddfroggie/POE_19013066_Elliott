@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-//[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(NavMeshAgent))]
 public class RangeUnit : LivingEntity
 {
     public enum State
@@ -24,7 +25,7 @@ public class RangeUnit : LivingEntity
     private Transform target;
 
 
-   // private NavMeshAgent pathFinder;
+    private NavMeshAgent pathFinder;
     private Material material;
     private Color originalColour;
 
@@ -38,7 +39,7 @@ public class RangeUnit : LivingEntity
     {
         base.Start();
         myCollisionRaduis = GetComponent<CapsuleCollider>().radius;
-        //pathFinder = GetComponent<NavMeshAgent>();
+        pathFinder = GetComponent<NavMeshAgent>();
         if (target != null)
         {
             //Get Player
@@ -94,10 +95,10 @@ public class RangeUnit : LivingEntity
                 Vector3 dirToTarget = (target.position - transform.position).normalized;
                 Vector3 targetPosition = new Vector3(target.position.x, 0, target.position.z);
                 targetPosition -= dirToTarget * (myCollisionRaduis + targetCollisionRaduis + AttackDistance / 2);
-               // if (pathFinder != null)
-              //  {
-               //     pathFinder.SetDestination(targetPosition);
-               // }
+                if (pathFinder != null)
+                {
+                    pathFinder.SetDestination(targetPosition);
+                }
             }
             yield return new WaitForSeconds(refreshRate);
         }

@@ -7,7 +7,7 @@ public class Factory : SpawningBuilding
     [SerializeField]
     Transform spawnPoint;
     [SerializeField]
-    RangeUnit unit_to_spawn;
+    public GameObject unit_to_spawn;
 
     [SerializeField]
     private float ms_between_possible_spawns = 10000f;
@@ -26,9 +26,9 @@ public class Factory : SpawningBuilding
         if (Time.time > next_spawn_time && should_spawn)
         {
             next_spawn_time = Time.time + ms_between_possible_spawns / 1000;
-            RangeUnit spawned = Instantiate(unit_to_spawn, spawnPoint.position, Quaternion.identity);
+            GameObject spawned = Instantiate(unit_to_spawn, spawnPoint.position, Quaternion.identity);
             should_spawn = false;
-            PostSpawnEvent(spawned);
+            //PostSpawnEvent(spawned as LivingEntity);
         }
     }
 
