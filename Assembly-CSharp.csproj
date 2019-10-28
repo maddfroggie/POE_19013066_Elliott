@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\CameraController.cs" />
     <Compile Include="Assets\FactionAController.cs" />
+    <Compile Include="Assets\Factory.cs" />
     <Compile Include="Assets\LivingEntity.cs" />
     <Compile Include="Assets\map.cs" />
     <Compile Include="Assets\RangedUnits.cs" />

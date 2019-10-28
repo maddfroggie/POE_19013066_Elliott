@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6377972829485917455}
   - component: {fileID: 4707713407573681756}
   - component: {fileID: 1361627087810807377}
+  - component: {fileID: -3905361181950717466}
+  - component: {fileID: 7393572562140859856}
   m_Layer: 0
   m_Name: FBuildings
   m_TagString: Untagged
@@ -92,3 +94,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!208 &-3905361181950717466
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8732260563928541384}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!114 &7393572562140859856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8732260563928541384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 173506d704e095e439a522c5fb881f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  spawnPoint: {fileID: 0}
+  unit_to_spawn: {fileID: 0}
+  ms_between_possible_spawns: 10000

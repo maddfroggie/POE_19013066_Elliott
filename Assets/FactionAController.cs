@@ -38,7 +38,7 @@ public class FactionAController : MonoBehaviour
                 }
             }
             SpawningBuilding b = Instantiate(factory_prefab, randomPos, Quaternion.Euler(0, Random.Range(0, 360), 0));
-            b.OnSpawned += OnEntitySpawned;
+        //    b.OnSpawned += OnEntitySpawned;////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             spawning_entities.Add(b);
             cachedPositions[i] = randomPos;
         }
@@ -50,7 +50,7 @@ public class FactionAController : MonoBehaviour
 
     }
 
-    void OnEntitySpawned(LivingEntity spawned)
+    /*void OnEntitySpawned(LivingEntity spawned)
     {
         unit_entities.Add(spawned);
         if (spawned is RangeUnit)
@@ -64,6 +64,6 @@ public class FactionAController : MonoBehaviour
             unit.SetTarget(temp);
         }
 
-    }
+    }*/
 
 }
